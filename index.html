@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KuronekoCoffee Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="is-boot">
+
+<!-- =========================================================
+  ✅ EDIT ZONE（ここだけ触ればOK）
+  1) Introのタイトルは #introTitle
+  2) ロゴ画像は images/KuronekoCoffeeLogo.png（差し替えOK）
+  3) Featured の初期表示タイトル/説明は #featuredTitle / #featuredSub
+  4) Worksカードは <article class="game-card"> の data-*** を編集
+  5) About の文章は .about-view 内（下の EDIT ZONE）を編集
+  6) SNSリンク（X/GitHub/Mail）は footer の href を編集
+========================================================= -->
+
+<!-- Intro（最初だけ出る） -->
+<div class="intro" id="intro" aria-hidden="false">
+  <div class="intro-inner">
+    <!-- ✅ EDIT: イントロ文字 -->
+    <h1 class="intro-title" id="introTitle">Kuroneko<br>Coffee</h1>
+
+    <!-- ✅ EDIT: イントロロゴ画像 -->
+    <img
+      src="images/KuronekoCoffeeLogo.png"
+      alt="KuronekoCoffee Logo"
+      class="intro-logo"
+      id="introLogo"
+      draggable="false"
+    >
+  </div>
+</div>
+
+<!-- Top Nav（上固定：Home / About / Works） -->
+<header class="top-nav" role="navigation" aria-label="Primary">
+  <div class="top-nav-inner">
+    <button class="nav-btn" id="homeBtn" type="button" aria-label="Back to top">Home</button>
+
+    <div class="nav-sep" aria-hidden="true"></div>
+
+    <button class="nav-btn" id="aboutBtn" type="button" aria-expanded="false">About</button>
+    <button class="nav-btn" id="worksBtn" type="button" aria-expanded="false">Works</button>
+  </div>
+</header>
+
+<!-- Main -->
+<div class="page" id="pageRoot" aria-hidden="true">
+
+  <!-- LEFT -->
+  <section class="left" id="leftCol">
+    <div class="left-inner">
+
+      <!-- Brand（Aboutでも使い回し） -->
+      <!-- ✅ 普通スクロール版：追従させないので keep-on-top を外す -->
+      <div class="brand" id="brandKeep">
+        <h1 class="title" id="brandTitle">Kuroneko<br>Coffee</h1>
+
+        <img
+          src="images/KuronekoCoffeeLogo.png"
+          alt="KuronekoCoffee Logo"
+          class="brand-logo"
+          draggable="false"
+        >
+      </div>
+
+      <!-- Featured（左の大きい枠） -->
+      <div class="featured" id="featured" tabindex="0" role="button" aria-label="Featured game">
+        <div class="featured-bg is-show" id="featuredBgA"></div>
+        <div class="featured-bg" id="featuredBgB"></div>
+
+        <div class="featured-inner">
+          <div class="featured-badge">Featured</div>
+
+          <div class="featured-title" id="featuredTitle">ゲーム1</div>
+          <div class="featured-sub" id="featuredSub">一言説明（例：2Dアクション）</div>
+        </div>
+      </div>
+
+      <!-- Info Sections -->
+      <div class="left-sections">
+
+        <!-- What I Value -->
+        <section class="info-card reveal" aria-label="What I Value">
+          <div class="info-head">
+            <h2 class="info-title is-big">What I Value</h2>
+            <p class="info-sub">ゲームを作るときに、常に大事にしていること</p>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-item">
+              <div class="info-k">短時間で直感的に楽しいと感じる体験を提供</div>
+              <div class="info-v">操作の気持ちよさや、短時間でも盛り上がる構成を意識して制作しています。</div>
+            </div>
+            <div class="info-item">
+              <div class="info-k">試行錯誤と改善を楽しむ姿勢</div>
+              <div class="info-v">うまくいかなかった部分も、原因を考えて改善する過程を楽しんでいます。仮説を立てて試し、より良い形に近づけていくことに価値を感じます。</div>
+            </div>
+            <div class="info-item">
+              <div class="info-k">オリジナリティ・個性やアイデアを大切にすること</div>
+              <div class="info-v">ゲームのシステムや世界観に、少しでもオリジナリティや独自性が感じられることを大切にしています。</div>
+            </div>
+            <div class="info-item">
+              <div class="info-k">チームメンバー・ユーザー視点を忘れない</div>
+              <div class="info-v">制作では、プレイヤーや一緒に作る人の視点を意識するよう心がけています。分かりやすさや共有しやすさを重視しています。</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="info-card reveal" aria-label="Skills">
+          <div class="info-head">
+            <h2 class="info-title is-big">Skills</h2>
+            <p class="info-sub">できること・強み「何を実現できるか」</p>
+          </div>
+
+          <div class="skill-grid">
+            <div class="skill-pill">
+              <img class="skill-ico" src="images/Unity_Logo.png" alt="Unity">
+              <div class="skill-text">
+                <div class="skill-name">Unity（ゲーム制作全般）</div>
+                <div class="skill-desc">実装〜調整まで一通り回せる</div>
+              </div>
+            </div>
+
+            <div class="skill-pill">
+              <img class="skill-ico" src="images/C_Sharp_Icon.png" alt="C#">
+              <div class="skill-text">
+                <div class="skill-name">C#</div>
+                <div class="skill-desc">ゲームロジック / 拡張しやすい設計</div>
+              </div>
+            </div>
+
+            <div class="skill-pill">
+              <div class="skill-dot" aria-hidden="true"></div>
+              <div class="skill-text">
+                <div class="skill-name">UI実装</div>
+                <div class="skill-desc">分かりやすい情報設計 / 操作導線</div>
+              </div>
+            </div>
+
+            <div class="skill-pill">
+              <div class="skill-dot" aria-hidden="true"></div>
+              <div class="skill-text">
+                <div class="skill-name">演出</div>
+                <div class="skill-desc">気持ちよさ・テンポ・見栄えの調整</div>
+              </div>
+            </div>
+
+            <div class="skill-pill">
+              <div class="skill-dot" aria-hidden="true"></div>
+              <div class="skill-text">
+                <div class="skill-name">ゲームルール設計</div>
+                <div class="skill-desc">短時間で盛り上がる勝敗構造づくり</div>
+              </div>
+            </div>
+
+            <div class="skill-pill">
+              <div class="skill-dot" aria-hidden="true"></div>
+              <div class="skill-text">
+                <div class="skill-name">パラメータ調整</div>
+                <div class="skill-desc">触って分かるバランス / リズム作り</div>
+              </div>
+            </div>
+
+            <div class="skill-pill">
+              <div class="skill-dot" aria-hidden="true"></div>
+              <div class="skill-text">
+                <div class="skill-name">データ駆動設計</div>
+                <div class="skill-desc">調整しやすいテーブル / 伸ばせる構造</div>
+              </div>
+            </div>
+
+            <div class="skill-pill">
+              <div class="skill-dot" aria-hidden="true"></div>
+              <div class="skill-text">
+                <div class="skill-name">プロトタイプ制作</div>
+                <div class="skill-desc">まず作って試す→磨くのが得意</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tools -->
+        <section class="info-card reveal" aria-label="Tools">
+          <div class="info-head">
+            <h2 class="info-title is-big">Tools</h2>
+            <p class="info-sub">制作環境（ソフト・サービス）</p>
+          </div>
+
+          <div class="tool-list">
+            <div class="tool-row">
+              <img class="tool-ico" src="images/Unity_Logo.png" alt="Unity">
+              <div class="tool-meta">
+                <div class="tool-name">Unity</div>
+                <div class="tool-sub">Editor / 制作環境</div>
+              </div>
+            </div>
+
+            <div class="tool-row">
+              <img class="tool-ico" src="images/Visual_Studio_Icon.png" alt="Visual Studio">
+              <div class="tool-meta">
+                <div class="tool-name">Visual Studio</div>
+                <div class="tool-sub">実装 / デバッグ</div>
+              </div>
+            </div>
+
+            <div class="tool-row">
+              <img class="tool-ico" src="images/github-mark.png" alt="GitHub">
+              <div class="tool-meta">
+                <div class="tool-name">GitHub</div>
+                <div class="tool-sub">リポジトリ / 共有</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Workflow -->
+        <section class="info-card reveal" aria-label="Workflow">
+          <div class="info-head">
+            <h2 class="info-title is-big">Workflow</h2>
+            <p class="info-sub">制作の進め方</p>
+          </div>
+
+          <div class="workflow-list">
+            <div class="wf-row">
+              <img class="wf-ico" src="images/PowerPoint.png" alt="PowerPoint">
+              <div class="wf-meta">
+                <div class="wf-name">PowerPoint</div>
+                <div class="wf-desc">仕様整理・画面構成・アイデア出し</div>
+              </div>
+            </div>
+
+            <div class="wf-row">
+              <img class="wf-ico" src="images/made-for-notion-white.png" alt="Notion">
+              <div class="wf-meta">
+                <div class="wf-name">Notion</div>
+                <div class="wf-desc">タスク管理・メモ・進行整理</div>
+              </div>
+            </div>
+
+            <div class="wf-row">
+              <img class="wf-ico" src="images/github-mark.png" alt="GitHub">
+              <div class="wf-meta">
+                <div class="wf-name">GitHub</div>
+                <div class="wf-desc">バージョン管理（ブランチ / 履歴 / 差分）</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-note"></div>
+        </section>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RIGHT -->
+  <aside class="right" id="worksRight">
+    <div class="rail">
+      <div class="rail-viewport" id="viewport" aria-label="Games rail">
+        <div class="rail-track" id="track">
+
+          <article class="game-card"
+            data-title=""
+            data-sub="ジャンル：タワーディフェンスゲーム"
+            data-img="images/game1.png"
+            data-link="game1.html">
+          </article>
+
+          <article class="game-card"
+            data-title="　"
+            data-sub="ジャンル：アクションゲーム"
+            data-img="images/game2.png"
+            data-link="game2.html">
+          </article>
+
+          <article class="game-card"
+            data-title="　"
+            data-sub="ジャンル：タワーディフェンスゲーム"
+            data-img="images/game3.png"
+            data-link="game3.html">
+          </article>
+
+          <article class="game-card"
+            data-title="　"
+            data-sub="ジャンル：アクション・知育"
+            data-img="images/game4.png"
+            data-link="game4.html">
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+
+</div>
+
+<!-- About black dim -->
+<div class="about-dim" id="aboutDim" aria-hidden="true"></div>
+
+<!-- About View -->
+<section class="about-view" id="aboutView" aria-hidden="true">
+  <div class="about-view-inner">
+
+    <!-- ※ここにJSが brandKeep を先頭に差し込む（使い回し） -->
+
+    <div class="about-view-head">
+      <button class="about-close" id="aboutClose" type="button" aria-label="Close">Close</button>
+    </div>
+
+    <!-- =========================================================
+      ✅ EDIT ZONE: Aboutの文章（ここをまとめて編集）
+    ========================================================= -->
+    <div class="about-layout">
+      <div class="about-main stagger-item">
+        <p class="about-lead">
+          Unity / C# を中心に、独自性あふれる新鮮なゲーム体験づくりに取り組んでいます。<br>
+          「直感操作」「独自性」「テンポの良さ」を軸に、プロトタイプ→改善を繰り返して完成度を上げるのが得意です。
+        </p>
+
+        <div class="about-note">
+          <strong>自己紹介</strong><br>
+          アイデアを形にして“触ってわかる楽しさ”にするのが好きです。<br>
+          ゲームのルール設計やUI導線、演出テンポの調整まで含めて、遊び心地を徹底的に磨くことを大事にしています。<br>
+          オリジナリティのある企画のアイデア出しが得意で、それを更に洗練させるのが好きです。<br>
+          妥協を極力避け、最高のプレイヤー体験を感じていただくことを常に求めています。
+        </div>
+      </div>
+
+      <div class="about-side">
+
+        <section class="about-section stagger-item">
+          <h2 class="about-h">Goal</h2>
+          <p class="about-desc">最終的に目指していること。<br></p>
+          <ul class="about-bullets">
+            <li>将来は企業でディレクターとして、企画・仕様・体験設計をまとめる役割を担いたいと考えています。</li>
+            <li>プレイヤー体験の質やチームの成果に責任を持ち、作品全体をより良い方向に導ける存在になりたいです。</li>
+            <li>現場で実績を積み、発信力と信頼を広げ、業界を更に前に進めたいです</li>
+            <li>辛い人や生活に疲れた人の生きる糧となるような作品を作りたいです</li>
+          </ul>
+        </section>
+
+        <section class="about-section stagger-item">
+          <h2 class="about-h">Personality</h2>
+          <p class="about-desc">自分の性格・制作スタイル。<br></p>
+          <ul class="about-bullets">
+            <li>チーム全体で役割を決めたり作業を分担して行うことが好き</li>
+            <li>試して学ぶ（プロトタイプ→改善）が好き</li>
+            <li>“気持ちよさ”やテンポの違和感に敏感でプレイ体験を何よりも重視する</li>
+            <li>目的から逆算して、やることを整理できる</li>
+          </ul>
+        </section>
+
+        <section class="about-section stagger-item">
+          <h2 class="about-h">Likes</h2>
+          <p class="about-desc">好きなこと・興味。<br></p>
+          <ul class="about-bullets">
+            <li>ゲームを沢山遊び、面白さを研究すること</li>
+            <li>勝敗構造・ルール設計を考えること</li>
+            <li>UI/演出（気持ちよさ・わかりやすさ）</li>
+            <li>ゲーム開発に置いての作業の効率化の探求</li>
+          </ul>
+        </section>
+
+        <section class="about-section stagger-item">
+          <h2 class="about-h">Links</h2>
+          <p class="about-desc">SNSなどのご連絡はこちらから</p>
+
+          <div class="about-links">
+            <a href="#" target="_blank" rel="noopener">X（Twitter）</a>
+            <a href="#" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Bottom Nav（下固定：SNS/連絡 + アイコン） -->
+<footer class="bottom-nav" role="navigation" aria-label="Contact links">
+  <div class="bottom-nav-inner">
+
+    <a class="nav-link" href="#" target="_blank" rel="noopener" aria-label="X">
+      <span class="nav-ico" aria-hidden="true">
+        <svg viewBox="0 0 24 24" role="img" focusable="false">
+          <path d="M18.9 2H21l-7.6 8.7L22 22h-6.7l-5.2-6.7L4.2 22H2l8.2-9.4L2 2h6.9l4.7 6.1L18.9 2zm-2.4 18h1.2L8.1 3.9H6.8L16.5 20z"/>
+        </svg>
+      </span>
+      <span class="nav-label">X</span>
+    </a>
+
+    <a class="nav-link" href="https://github.com/kuronekocoffee" target="_blank" rel="noopener" aria-label="GitHub">
+      <span class="nav-ico" aria-hidden="true">
+        <svg viewBox="0 0 24 24" role="img" focusable="false">
+          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.092 24 16.592 24 11.297c0-6.627-5.373-12-12-12"/>
+        </svg>
+      </span>
+      <span class="nav-label">GitHub</span>
+    </a>
+
+    <a class="nav-link" href="mailto:example@example.com" aria-label="Mail">
+      <span class="nav-ico" aria-hidden="true">
+        <svg viewBox="0 0 24 24" role="img" focusable="false">
+          <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+      </span>
+      <span class="nav-label">Mail</span>
+    </a>
+
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

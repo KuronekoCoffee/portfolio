@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>転売屋・サンタ | KuronekoCoffee</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="is-enter is-entered detail-page">
+
+<!-- =========================================================
+  ✅ EDIT ZONE（このページで文章を書く場所）
+  1) タイトル：<title> と h2.detail-h1
+  2) サムネ：.hero の url(images/xxxx.png)
+  3) 本文：各セクションの <p class="detail-p"> を編集
+  4) About：下の About View 内の文章を編集（indexと同じ内容）
+  5) 下のSNSリンク：footerの href を編集
+========================================================= -->
+
+<!-- Top Nav（上固定：Home / About / Works） -->
+<header class="top-nav" role="navigation" aria-label="Primary">
+  <div class="top-nav-inner">
+    <button class="nav-btn" id="homeBtn" type="button" aria-label="Back to top">Home</button>
+
+    <div class="nav-sep" aria-hidden="true"></div>
+
+    <button class="nav-btn" id="aboutBtn" type="button" aria-expanded="false">About</button>
+    <button class="nav-btn" id="worksBtn" type="button" aria-expanded="false">Works</button>
+  </div>
+</header>
+
+<!-- Detail -->
+<main class="detail-wrap">
+
+  <div class="detail-top">
+    <a class="back" href="index.html#works">← 戻る</a>
+  </div>
+
+  <!-- ✅ EDIT: 作品画像（サムネ） -->
+  <div class="hero" style="background-image: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url(images/game2.png);"></div>
+
+  <!-- ✅ EDIT: 作品名 -->
+  <h2 class="detail-h1">転売屋・サンタ</h2>
+
+  <!-- ✅ EDIT: リード文 -->
+  <p class="detail-p">
+    初めて2人同時プレイのゲームを作り、それと同時に初めてコントローラーに対応したゲームです。<br>
+    最初は2人のサンタがどちらが多くプレゼントを配達できるのかというゲーム性でしたが、対戦ゲーム要素が薄いことや<br>
+    ただ配達で移動する地味で退屈なプレイになってしまったため、お互いのプレゼントを奪い合いゴールに入れるという闘争の要素を強調することになりました。
+  </p>
+
+  <!-- ✅ EDIT: セクション本文 -->
+  <h3>概要</h3>
+  <p class="detail-p">
+    プレゼントを敵プレイヤーに投げる際に、当たりやすいように少しホーミングするシステムを作りました。<br>
+    バトル途中に現れる暴走クリスマスツリーは、得点が有利なプレイヤーを優先的に狙うため、逆転が起こりやすいシステムにしています。
+  </p>
+
+  <h3>操作</h3>
+  <p class="detail-p">
+    コントローラーの左スティックで移動、Ａボタンでプレゼントを投げる<br>
+  </p>
+
+  <h3>担当・使用技術</h3>
+  <p class="detail-p">
+    Unity / C#　：　黒猫コーヒー
+  </p>
+
+  <h3>リンク</h3>
+  <p class="detail-p">
+    動画URL、配布ページ、GitHubなど<br>
+    <br>
+    ...該当URL無し
+  </p>
+
+</main>
+
+<!-- About black dim -->
+<div class="about-dim" id="aboutDim" aria-hidden="true"></div>
+
+<!-- About View -->
+<section class="about-view" id="aboutView" aria-hidden="true">
+  <div class="about-view-inner">
+
+    <!-- ✅ このページは brandKeep が無いので、JSがここに自動でブランドを差し込む -->
+
+    <div class="about-view-head">
+      <button class="about-close" id="aboutClose" type="button" aria-label="Close">Close</button>
+    </div>
+
+    <!-- =========================================================
+      ✅ EDIT ZONE: Aboutの文章（indexと同じ）
+    ========================================================= -->
+    <div class="about-layout">
+      <div class="about-main stagger-item">
+        <p class="about-lead">
+          Unity / C# を中心に、独自性あふれる新鮮なゲーム体験づくりに取り組んでいます。<br>
+          「直感操作」「独自性」「テンポの良さ」を軸に、プロトタイプ→改善を繰り返して完成度を上げるのが得意です。
+        </p>
+
+        <div class="about-note">
+          <strong>自己紹介</strong><br>
+          アイデアを形にして“触ってわかる楽しさ”にするのが好きです。<br>
+          ゲームのルール設計やUI導線、演出テンポの調整まで含めて、遊び心地を徹底的に磨くことを大事にしています。<br>
+          オリジナリティのある企画のアイデア出しが得意で、それを更に洗練させるのが好きです。<br>
+          妥協を極力避け、最高のプレイヤー体験を感じていただくことを常に求めています。
+        </div>
+      </div>
+
+      <div class="about-side">
+
+        <!-- ✅ NEW: Goal -->
+        <section class="about-section stagger-item">
+          <h2 class="about-h">Goal</h2>
+          <p class="about-desc">
+            最終的に目指していること。<br>
+          </p>
+          <ul class="about-bullets">
+            <li>将来は企業でディレクターとして、企画・仕様・体験設計をまとめる役割を担いたいと考えています。</li>
+            <li>プレイヤー体験の質やチームの成果に責任を持ち、作品全体をより良い方向に導ける存在になりたいです。</li>
+            <li>現場で実績を積み、発信力と信頼を広げ、業界を更に前に進めたいです</li>
+            <li>辛い人や生活に疲れた人の生きる糧となるような作品を作りたいです</li>
+          </ul>
+        </section>
+
+        <!-- ✅ NEW: Personality -->
+        <section class="about-section stagger-item">
+          <h2 class="about-h">Personality</h2>
+          <p class="about-desc">
+            自分の性格・制作スタイル。<br>
+          </p>
+          <ul class="about-bullets">
+            <li>チーム全体で役割を決めたり作業を分担して行うことが好き</li>
+            <li>試して学ぶ（プロトタイプ→改善）が好き</li>
+            <li>“気持ちよさ”やテンポの違和感に敏感でプレイ体験を何よりも重視する</li>
+            <li>目的から逆算して、やることを整理できる</li>
+          </ul>
+        </section>
+
+        <!-- ✅ NEW: Likes -->
+        <section class="about-section stagger-item">
+          <h2 class="about-h">Likes</h2>
+          <p class="about-desc">
+            好きなこと・興味。<br>
+          </p>
+          <ul class="about-bullets">
+            <li>ゲームを沢山遊び、面白さを研究すること</li>
+            <li>勝敗構造・ルール設計を考えること</li>
+            <li>UI/演出（気持ちよさ・わかりやすさ）</li>
+            <li>ゲーム開発に置いての作業の効率化の探求</li>
+          </ul>
+        </section>
+
+        <!-- Links -->
+        <section class="about-section stagger-item">
+          <h2 class="about-h">Links</h2>
+          <p class="about-desc">SNSなどのご連絡はこちらから</p>
+
+          <!-- ✅ EDIT: About内リンク -->
+          <div class="about-links">
+            <a href="#" target="_blank" rel="noopener">X（Twitter）</a>
+            <a href="#" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Bottom Nav（下固定：SNS/連絡 + アイコン） -->
+<footer class="bottom-nav" role="navigation" aria-label="Contact links">
+  <div class="bottom-nav-inner">
+
+    <!-- ✅ EDIT: Xリンク -->
+    <a class="nav-link" href="#" target="_blank" rel="noopener" aria-label="X">
+      <span class="nav-ico" aria-hidden="true">
+        <svg viewBox="0 0 24 24" role="img" focusable="false">
+          <path d="M18.9 2H21l-7.6 8.7L22 22h-6.7l-5.2-6.7L4.2 22H2l8.2-9.4L2 2h6.9l4.7 6.1L18.9 2zm-2.4 18h1.2L8.1 3.9H6.8L16.5 20z"/>
+        </svg>
+      </span>
+      <span class="nav-label">X</span>
+    </a>
+
+    <!-- ✅ EDIT: GitHubリンク -->
+    <a class="nav-link" href="https://github.com/kuronekocoffee" target="_blank" rel="noopener" aria-label="GitHub">
+      <span class="nav-ico" aria-hidden="true">
+        <svg viewBox="0 0 24 24" role="img" focusable="false">
+          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.092 24 16.592 24 11.297c0-6.627-5.373-12-12-12"/>
+        </svg>
+      </span>
+      <span class="nav-label">GitHub</span>
+    </a>
+
+    <!-- ✅ EDIT: メール -->
+    <a class="nav-link" href="mailto:example@example.com" aria-label="Mail">
+      <span class="nav-ico" aria-hidden="true">
+        <svg viewBox="0 0 24 24" role="img" focusable="false">
+          <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+      </span>
+      <span class="nav-label">Mail</span>
+    </a>
+
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
